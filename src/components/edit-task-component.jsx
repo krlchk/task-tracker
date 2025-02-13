@@ -40,7 +40,7 @@ export function EditTask({
     <>
       <button
         onClick={() => setEditModal(true)}
-        className="rounded-lg mobile:w-2/3 mobile:self-end mobile:order-1 border-2 border-blue-500 mobile:px-0 px-5 font-semibold text-blue-500 transition-colors hover:bg-blue-500 hover:text-white"
+        className="rounded-lg max-h-[40px] mobile:w-2/3 mobile:self-end mobile:order-1 border-2 border-blue-500 mobile:px-0 px-5 font-semibold text-blue-500 transition-colors hover:bg-blue-500 hover:text-white"
       >
         Edit
       </button>

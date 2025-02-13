@@ -53,17 +53,19 @@ export function ToDo({ task, updateTask, deleteTask, errorHandling }) {
       ref={drag}
       className="flex flex-col gap-5 bg-white p-5 text-lg shadow-xl"
     >
-      <div className="flex mobile:flex-col  justify-between">
-        <p className="text-xl mobile:order-2 font-bold">{task.projectName}</p>
+      <div className="flex justify-between mobile:flex-col">
+        <p className="h-auto max-w-[300px] break-words text-xl font-bold mobile:order-2">
+          {task.projectName}
+        </p>
         <EditTask
           task={task}
           updateTask={updateTask}
           errorHandling={errorHandling}
         />
       </div>
-      <p>{task.projectDescription}</p>
-      <div className="flex justify-center mobile:flex-col gap-5 py-3">
-        <div className="flex text-xl mobile:justify-center font-bold">
+      <p className="h-auto max-w-[300px] break-words">{task.projectDescription}</p>
+      <div className="flex justify-center gap-5 py-3 mobile:flex-col">
+        <div className="flex text-xl font-bold mobile:justify-center">
           <p className="self-end">
             {("0" + Math.floor((time / 3600000) % 24)).slice(-2)}:
           </p>
